@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary Urvesh & Janki</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Amatic SC', cursive;
+            text-align: center;
+            background-color: #ffebcd;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff5e6;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+        h1 {
+            color: #ff5733;
+        }
+        .photo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .photo-container img {
+            width: 45%;
+            border-radius: 10px;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+            cursor: pointer;
+        }
+        .photo-container img:hover {
+            filter: grayscale(0%);
+        }
+        .photo-container p {
+            width: 45%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+        .hashtag {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff4500;
+            margin-top: 10px;
+        }
+        .wishes {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 15px;
+        }
+        #play-music {
+            display: none;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: white;
+            background-color: #ff4500;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="Beautiful.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="play-music">Play Music 🎵</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.getElementById('bg-music');
+            const playButton = document.getElementById('play-music');
+
+            audio.play().catch(() => {
+                playButton.style.display = "block"; // Show play button if autoplay is blocked
+            });
+
+            playButton.addEventListener('click', () => {
+                audio.play();
+                playButton.style.display = "none"; // Hide button after playing
+            });
+
+            document.addEventListener('click', () => {
+                audio.play();
+            }, { once: true });
+        });
+    </script>
+
+    <div class="container">
+        <h1>Happy Anniversary Urvesh & Janki!</h1>
+        <p>Wishing you both endless love and happiness on your special day! ❤️</p>
+        
+        <div class="photo-container">
+            <img src="/image/1.jpg" alt="Urvesh & Janki">
+            <p>A beautiful moment captured forever.</p>
+        </div>
+        <div class="photo-container" style="flex-direction: row-reverse;">
+            <img src="/image/2.jpg" alt="Urvesh & Janki">
+            <p>A bond that grows stronger each day.</p>
+        </div>
+        <div class="photo-container">
+            <img src="/image/3.jpg" alt="Urvesh & Janki">
+            <p>Love in every glance.</p>
+        </div>
+        <div class="photo-container" style="flex-direction: row-reverse;">
+            <img src="/image/4.jpg" alt="Urvesh & Janki">
+            <p>Cherishing every moment together.</p>
+        </div>
+        <div class="photo-container">
+            <img src="/image/5.jpg" alt="Urvesh & Janki">
+            <p>A journey of love and togetherness.</p>
+        </div>
+        <div class="photo-container" style="flex-direction: row-reverse;">
+            <img src="/image/6.jpg" alt="Urvesh & Janki">
+            <p>Unbreakable bond and trust.</p>
+        </div>
+        <div class="photo-container">
+            <img src="/image/7.jpg" alt="Urvesh & Janki">
+            <p>True love is timeless.</p>
+        </div>
+        <div class="photo-container" style="flex-direction: row-reverse;">
+            <img src="/image/DSC06486.JPG" alt="Urvesh & Janki">
+            <p>Every memory tells a story.</p>
+        </div>
+        <div class="photo-container">
+            <img src="/image/DSC06586.JPG" alt="Urvesh & Janki">
+            <p>Cheers to forever! ❤️</p>
+        </div>
+        
+        <p class="hashtag">#UrJa</p>
+        <p>Celebrating Love Since <strong>18th February</strong></p>
+        <div class="wishes">
+            <p>"Wishing you a lifetime of love, laughter, and happiness."</p>
+            <p>"May your love story continue to inspire others and bring joy to all. Cheers to many more beautiful years!"</p>
+            <p>"Your love is a beautiful journey that deserves to be celebrated."</p>
+            <p>Happy Anniversary Both Of You ❤️‍🔥</p>
+        </div>
+    </div>
+
+</body>
+</html>
